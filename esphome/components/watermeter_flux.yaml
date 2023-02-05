@@ -72,7 +72,7 @@ sensor:
     accuracy_decimals: 1
     icon: "mdi:water-pump"
     filters:
-      lambda: return x * atof(id(Select_pulse_water).state.c_str()) * 1000;
+      lambda: return x;
 
 # ⬇ Totaal watermeter ⬇ #      
     total:
