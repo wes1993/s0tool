@@ -68,7 +68,7 @@ sensor:
     id: watermeter_pulse
     name: "watermeter pulse"
     state_class: measurement
-    unit_of_measurement: "l/min"    
+    unit_of_measurement: "l/mind"    
     accuracy_decimals: 1
     icon: "mdi:water-pump"
     filters:
