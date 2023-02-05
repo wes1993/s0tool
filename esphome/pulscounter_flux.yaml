@@ -16,7 +16,7 @@ esphome:
     version: "${vdate}"
   
 dashboard_import:
-  package_import_url: github://wes1993/s0tool/esphome/pulscounter.yaml
+  package_import_url: github://wes1993/s0tool/esphome/pulscounter_flux.yaml
 
 packages:   
   remote_package:
