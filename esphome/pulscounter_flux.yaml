@@ -12,7 +12,7 @@ esphome:
   board: d1_mini
   comment: '${device_description}'
   project:
-    name: huizebruin.${name}
+    name: wes93.${name}
     version: "${vdate}"
   
 dashboard_import:
@@ -25,5 +25,5 @@ packages:
     files: 
       - esphome/components/basis.yaml
       - esphome/components/kwhpuls.yml
-      - esphome/components/watermeter_flux.yaml            
+      - esphome/components/watermeter_flux.yaml
 #     refresh: 0d 
