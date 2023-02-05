@@ -20,11 +20,11 @@ api:
 globals:
   - id: initial_water_usage
     type: float
-    restore_value: yes      
+    restore_value: no    
     initial_value: '010' 
   - id: total_water_pulses
     type: int
-    restore_value: yes
+    restore_value: no
     
 select:
   # ⬇ water per m3 rate ⬇ #
@@ -58,7 +58,7 @@ binary_sensor:
         input: true
     on_press:
       - then:
-          lambda: id(total_water_pulses) += 1;  
+          lambda: (id(total_water_pulses) += 1) / 5;  
 
 sensor:
 #------------------------# Watermeter #------------------------#
