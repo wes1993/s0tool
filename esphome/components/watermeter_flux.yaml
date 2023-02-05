@@ -67,7 +67,7 @@ sensor:
   - platform: pulse_counter
     pin: D2
     id: watermeter_pulse
-    name: "watermeter pulse"
+    name: "watermeter impulsi"
     state_class: measurement
     unit_of_measurement: "l/mind"    
     accuracy_decimals: 1
