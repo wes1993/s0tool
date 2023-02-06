@@ -71,7 +71,7 @@ sensor:
     
 text_sensor:
   - platform: template
-    name: "Versione Software s0tool"
+    name: "s0tool Versione Software"
     id: s0tool_versie
     icon: 'mdi:alpha-v-circle-outline' 
     update_interval: 6h
@@ -99,5 +99,5 @@ button:
     
 # Factory Reset Switch from ESPHome v2022.09    
   - platform: factory_reset
-    name: Ripristina Impostazioni di Fabbrica   
+    name: s0tool Ripristina Impostazioni di Fabbrica   
     
