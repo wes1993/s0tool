@@ -23,7 +23,7 @@ packages:
     url: https://github.com/wes1993/s0tool/
     ref: main
     files: 
-      - esphome/IT/components/basis.yaml
+      - esphome/components/basis.yaml
       - esphome/IT/components/kwhpuls.yml
       - esphome/IT/components/watermeter_flux.yaml
 #     refresh: 0d 
