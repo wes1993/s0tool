@@ -12,7 +12,7 @@ esphome:
   board: d1_mini
   comment: '${device_description}'
   project:
-    name: wes93.${name}
+    name: huizebruin.${name}
     version: "${vdate}"
   
 dashboard_import:
