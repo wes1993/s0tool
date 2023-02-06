@@ -27,7 +27,7 @@ globals:
 number:
   - platform: template
     id: Select_pulse_rate
-    name: 'Scegli Pulsazione kWh'
+    name: '[Corrente] - Scegli Pulsazione kWh'
     optimistic: true
     mode: box
     min_value: '10'
@@ -40,7 +40,7 @@ binary_sensor:
  #------------------------# kwh #------------------------#
   - platform: gpio
     id: internal_pulse_counter2
-    name: Sensore Pulsazioni kWh (D5)
+    name: [Corrente] - Sensore Pulsazioni kWh (D5)
     pin:
       number: D5
       mode:
@@ -53,7 +53,7 @@ sensor:
 # ⬇ kwh meter s0 ⬇ #
   - platform: pulse_meter
     pin: D5
-    name:  "Energia Attuale"
+    name:  "[Corrente] - Energia Attuale"
     id: actual_power
     icon: "mdi:flash"
     # internal_filter: ${impulslengte} 
@@ -67,7 +67,7 @@ sensor:
 # ⬇ Totaal opgebracht ⬇ #    
     total:
       unit_of_measurement: 'kWh'
-      name: "Energia Totale (Dal Riavvio)"
+      name: "[Corrente] - Energia Totale (Dal Riavvio)"
       id: W_opbrengst_totaal
       state_class: total_increasing
       device_class: energy
@@ -81,7 +81,7 @@ sensor:
 # ⬇ Kwh meterstand ⬇ stand bij benadering #        
   - platform: template
     id: kwh_total
-    name: "Energia Totale"
+    name: "[Corrente] - Energia Totale"
     state_class: "total_increasing"
     device_class: energy
     icon: "mdi:flash"
@@ -93,7 +93,7 @@ sensor:
 # ⬇ kwh pulses only web interface for debugging ⬇ #
   - platform: template
     id: kwh_pulses
-    name: "Pulsazioni kWh Totali"
+    name: "[Corrente] - Pulsazioni kWh Totali"
     state_class: "total_increasing"
     lambda: return id(total_kwh_pulses);
     accuracy_decimals: 0
