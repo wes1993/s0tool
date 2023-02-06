@@ -61,12 +61,13 @@ binary_sensor:
 sensor:
 #------------------------# Watermeter #------------------------#
 # ⬇ watermeter pulsen ⬇ #
-  - platform: pulse_meter
+  - platform: pulse_counter
     pin: D2
     id: watermeter_pulse
     name: "l/min at the moment"
     state_class: measurement
-    unit_of_measurement: "l/min"    
+    unit_of_measurement: "l/min"
+    update_interval: 15s
     accuracy_decimals: 1
     icon: "mdi:water-pump"
     filters:
