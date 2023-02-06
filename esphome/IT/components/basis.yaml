@@ -52,7 +52,7 @@ sensor:
 
   - platform: template
     id: S0tool_uptime_timestamp
-    name: "${name} Uptime"
+    name: "${name} - Uptime"
     device_class: "timestamp"
     accuracy_decimals: 0
     update_interval: never
@@ -71,7 +71,7 @@ sensor:
     
 text_sensor:
   - platform: template
-    name: "s0tool Versione Software"
+    name: "s0tool - Versione Software"
     id: s0tool_versie
     icon: 'mdi:alpha-v-circle-outline' 
     update_interval: 6h
@@ -80,22 +80,22 @@ text_sensor:
 
   - platform: wifi_info
     ip_address:
-      name: "${name} Indirizzo IP"
+      name: "${name} - Indirizzo IP"
       id: s0tool_ip_adres
       icon: mdi:ip-network
     ssid:
-      name: "${name} Nome Rete"
+      name: "${name} - Nome Rete"
       id: s0tool_netwerk
       icon: mdi:access-point-network
     mac_address:
-      name: "${name} Indirizzo Mac"
+      name: "${name} - Indirizzo Mac"
       id: s0tool_mac_adres
       icon: mdi:folder-key-network-outline
 
 #  restart button  #
 button:  
   - platform: restart
-    name: "${name} Riavvia Dispositivo"
+    name: "${name} - Riavvia Dispositivo"
     
 # Factory Reset Switch from ESPHome v2022.09    
   - platform: factory_reset
