@@ -36,6 +36,7 @@ number:
     mode: box
     min_value: '0.001'
     max_value: '100'
+    accuracy_decimals: 1
     step: '1'
     restore_value: yes
     initial_value: '7.5'
