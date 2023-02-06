@@ -31,7 +31,7 @@ globals:
 number:
   - platform: template
     id: select_flow_pulse
-    name: 'Value sensor, example 7.5xQ you should put 7.5'
+    name: 'Flow Rate Value del Sensore (es. (7.5xQ) devi inserire 7.5)'
     optimistic: true
     mode: box
     min_value: '0.001'
@@ -63,7 +63,7 @@ sensor:
   - platform: pulse_counter
     pin: D2
     id: watermeter_pulse
-    name: "l/min at the moment"
+    name: "l/min Attuali"
 #    state_class: measurement
     unit_of_measurement: "l/min"
     update_interval: 15s
@@ -75,7 +75,7 @@ sensor:
 # ⬇ Totaal watermeter ⬇ #      
     total:
       id: sensor_pulse_meter_total
-      name: "Total Liters"
+      name: "Litri Totali (Dal Riavvio)"
       unit_of_measurement: "L"
       state_class: total_increasing
       device_class: water
@@ -87,7 +87,7 @@ sensor:
 # ⬇ Total M3 ⬇ #
   - platform: template
     id: watermeter_total
-    name: "watermeter total m3"
+    name: "M3 Totali"
     state_class: "total_increasing"
     icon: mdi:water
     unit_of_measurement: "m³"
@@ -97,14 +97,14 @@ sensor:
 # ⬇ Test Initial Water Usage ⬇ #
   - platform: template
     id: watermeter_test
-    name: "watermeter test initial water usage"
+    name: "Valore Contatore Attuale Inserito"
     state_class: "total_increasing"
     accuracy_decimals: 0
     lambda: return id(initial_water_usage);
     
   - platform: template
     id: watermeter_q_test
-    name: "watermeter Q test"
+    name: "Flow Rate * 60"
  #   state_class: "total_increasing"
     accuracy_decimals: 1
     lambda: return id(select_flow_pulse).state * 60;
@@ -112,7 +112,7 @@ sensor:
 # ⬇ Waterpulses  only web interface for debugging ⬇ #
   - platform: template
     id: watermeter_pulses
-    name: "watermeter pulses totaal"
+    name: "Pulsazioni Totali"
     state_class: "total_increasing"
     accuracy_decimals: 0
     lambda: return id(total_water_pulses);
