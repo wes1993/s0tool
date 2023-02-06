@@ -27,7 +27,7 @@ globals:
 number:
   - platform: template
     id: Select_pulse_rate
-    name: 'Pulsrate kWh'
+    name: 'Scegli Pulsazione kWh'
     optimistic: true
     mode: box
     min_value: '10'
@@ -40,7 +40,7 @@ binary_sensor:
  #------------------------# kwh #------------------------#
   - platform: gpio
     id: internal_pulse_counter2
-    name: Pulse Sensor kwh
+    name: Sensore Pulsazioni kWh
     pin:
       number: D5
       mode:
