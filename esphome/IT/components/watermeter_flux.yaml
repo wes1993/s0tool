@@ -31,7 +31,7 @@ globals:
 number:
   - platform: template
     id: select_flow_pulse
-    name: "[Acqua] - Flow Rate Value del Sensore (es. (7.5xQ) devi inserire 7.5)"
+    name: "[Impostazioni] - [Acqua] - Flow Rate Value del Sensore (es. (7.5xQ) devi inserire 7.5)"
     optimistic: true
     mode: box
     min_value: '0.001'
