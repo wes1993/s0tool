@@ -47,7 +47,7 @@ number:
 binary_sensor:
   - platform: gpio
     id: internal_pulse_counter
-    name: [Acqua] - Sensore Pulsazioni Acqua (D2)
+    name: Sensore Pulsazioni Acqua (D2)
     pin:
       number: D2
       inverted: true
