@@ -32,6 +32,7 @@ number:
   - platform: template
     id: Select_pulse_water
     name: 'Value sensor, example 7.5xQ you should put 7.5'
+    type: float
     optimistic: true
     mode: box
     min_value: '0.001'
