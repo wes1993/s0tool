@@ -3,7 +3,7 @@
 # Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
 # © Huizebruin.nl
 substitutions:
-  vdate: "v23.01.28" 
+  vdate: "V23.01.28" 
   date: "21-01-2023"
   device_description: ${name} Versione Software ${vdate} - ${date}.
 
