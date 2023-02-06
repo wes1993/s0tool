@@ -93,6 +93,16 @@ sensor:
     unit_of_measurement: "m³"
     accuracy_decimals: 3
     lambda: return id(initial_water_usage) + ((id(total_water_pulses) / (id(select_flow_pulse).state * 60 )) / 1000);
+    
+    # ⬇ Total M3 ⬇ #
+  - platform: template
+    id: acqua_litri_totali
+    name: "[Acqua] - Litri Totali"
+    state_class: "total_increasing"
+    icon: mdi:water
+    unit_of_measurement: "L"
+    accuracy_decimals: 3
+    lambda: return id(initial_water_usage) + (id(total_water_pulses) / (id(select_flow_pulse).state * 60 ));
 
 # ⬇ Test Initial Water Usage ⬇ #
   - platform: template
