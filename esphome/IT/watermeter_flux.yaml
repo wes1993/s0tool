@@ -16,7 +16,7 @@ esphome:
     version: "${vdate}"
   
 dashboard_import:
-  package_import_url: github://wes1993/s0tool/esphome/IT/pulscounter_flux.yaml
+  package_import_url: github://wes1993/s0tool/esphome/IT/watermeter_flux.yaml
 
 packages:   
   remote_package:
@@ -24,6 +24,5 @@ packages:
     ref: main
     files: 
       - esphome/IT/components/basis.yaml
-      - esphome/IT/components/kwhpuls.yml
       - esphome/IT/components/watermeter_flux.yaml
 #     refresh: 0d 
