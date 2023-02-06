@@ -105,7 +105,7 @@ sensor:
   - platform: template
     id: watermeter_q_test
     name: "watermeter Q test"
-    state_class: "total_increasing"
+ #   state_class: "total_increasing"
     accuracy_decimals: 1
     lambda: return id(Select_pulse_rate).state;
 
