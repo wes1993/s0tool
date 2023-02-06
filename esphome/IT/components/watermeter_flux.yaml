@@ -31,7 +31,7 @@ globals:
 number:
   - platform: template
     id: select_flow_pulse
-    name: '[Acqua] - Flow Rate Value del Sensore (es. (7.5xQ) devi inserire 7.5)'
+    name: "[Acqua] - Flow Rate Value del Sensore (es. (7.5xQ) devi inserire 7.5)"
     optimistic: true
     mode: box
     min_value: '0.001'
@@ -47,7 +47,7 @@ number:
 binary_sensor:
   - platform: gpio
     id: internal_pulse_counter
-    name: Sensore Pulsazioni Acqua (D2)
+    name: "[Acqua] - Sensore Pulsazioni Acqua (D2)"
     pin:
       number: D2
       inverted: true
