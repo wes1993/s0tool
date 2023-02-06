@@ -30,7 +30,7 @@ globals:
 #   # ⬇ Water per liter rate ⬇ #
 number:
   - platform: template
-    id: Select_pulse_water
+    id: Select_pulse_rate
     name: 'Value sensor, example 7.5xQ you should put 7.5'
     optimistic: true
     mode: box
