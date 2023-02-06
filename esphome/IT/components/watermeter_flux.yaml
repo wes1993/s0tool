@@ -31,7 +31,7 @@ globals:
 number:
   - platform: template
     id: select_flow_pulse
-    name: 'Flow Rate Value del Sensore (es. (7.5xQ) devi inserire 7.5)'
+    name: '[Acqua] - Flow Rate Value del Sensore (es. (7.5xQ) devi inserire 7.5)'
     optimistic: true
     mode: box
     min_value: '0.001'
@@ -47,7 +47,7 @@ number:
 binary_sensor:
   - platform: gpio
     id: internal_pulse_counter
-    name: Sensore Pulsazioni Acqua (D2)
+    name: [Acqua] - Sensore Pulsazioni Acqua (D2)
     pin:
       number: D2
       inverted: true
@@ -63,7 +63,7 @@ sensor:
   - platform: pulse_counter
     pin: D2
     id: watermeter_pulse
-    name: "l/min Attuali"
+    name: "[Acqua] - L/Min Attuali"
 #    state_class: measurement
     unit_of_measurement: "l/min"
     update_interval: 15s
@@ -75,7 +75,7 @@ sensor:
 # ⬇ Totaal watermeter ⬇ #      
     total:
       id: sensor_pulse_meter_total
-      name: "Litri Totali (Dal Riavvio)"
+      name: "[Acqua] - Litri Totali (Dal Riavvio)"
       unit_of_measurement: "L"
       state_class: total_increasing
       device_class: water
@@ -87,7 +87,7 @@ sensor:
 # ⬇ Total M3 ⬇ #
   - platform: template
     id: watermeter_total
-    name: "M3 Totali"
+    name: "[Acqua] - M3 Totali"
     state_class: "total_increasing"
     icon: mdi:water
     unit_of_measurement: "m³"
@@ -97,14 +97,14 @@ sensor:
 # ⬇ Test Initial Water Usage ⬇ #
   - platform: template
     id: watermeter_test
-    name: "Valore Contatore Attuale Inserito"
+    name: "[Acqua] - Valore Contatore Attuale Inserito"
     state_class: "total_increasing"
     accuracy_decimals: 0
     lambda: return id(initial_water_usage);
     
   - platform: template
     id: watermeter_q_test
-    name: "Flow Rate * 60"
+    name: "[Acqua] - Flow Rate * 60"
  #   state_class: "total_increasing"
     accuracy_decimals: 1
     lambda: return id(select_flow_pulse).state * 60;
@@ -112,7 +112,7 @@ sensor:
 # ⬇ Waterpulses  only web interface for debugging ⬇ #
   - platform: template
     id: watermeter_pulses
-    name: "Pulsazioni Totali"
+    name: "[Acqua] - Pulsazioni Totali"
     state_class: "total_increasing"
     accuracy_decimals: 0
     lambda: return id(total_water_pulses);
