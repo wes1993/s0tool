@@ -80,7 +80,7 @@ sensor:
       device_class: water
       accuracy_decimals: 3
       filters:
-        lambda: return (x / (id(Select_pulse_rate).state * 60 ))
+        lambda: return (x / (id(Select_pulse_rate).state * 60 ));
 
       
 # ⬇ Total M3 ⬇ #
