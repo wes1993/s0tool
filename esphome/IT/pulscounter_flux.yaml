@@ -1,0 +1,29 @@
+# Delen en bewerken mag maar laat deze eerste regels staan.
+# Bron : https://www.huizebruin.nl
+# Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
+# © Huizebruin.nl
+substitutions:
+  device_description: ${name} Versione Software ${vdate} .
+  name: s0tool-standard
+
+esphome:
+  name: ${name}
+  platform: ESP8266
+  board: d1_mini
+  comment: '${device_description}'
+  project:
+    name: huizebruin.${name}
+    version: "${vdate}"
+  
+dashboard_import:
+  package_import_url: github://wes1993/s0tool/esphome/pulscounter_flux.yaml
+
+packages:   
+  remote_package:
+    url: https://github.com/wes1993/s0tool/
+    ref: main
+    files: 
+      - esphome/components/basis.yaml
+      - esphome/components/kwhpuls.yml
+      - esphome/components/watermeter_flux.yaml
+#     refresh: 0d 
